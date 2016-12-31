@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <title>Ctrip</title>
+  <meta name="description" content="Ctrip" />
+  <meta name="keywords" content="Ctrip" />
+  <meta charset="utf-8" />
+  <link rel="alternate" media="only screen and (max-width: 640px)" href="http://english.ctrip.com/">
+  <link rel="alternate" href="http://english.ctrip.com/m/" hreflang="en-US" title="English">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui" />
+  <meta http-equiv='Content-type' content='text/html; charset=utf-8' />
+  <meta name='format-detection' content='telephone=no' />
+  <meta name='apple-touch-fullscreen' content='yes' />
+  <meta name='apple-mobile-web-app-capable' content='yes' />
+  <link rel="stylesheet" type="text/css" href="http://localhost:8000/dist/css/IBU.H5.flight.css">
+<script>
+;(function () {
+  var tid = null;
+  var docEl = document.documentElement;
+  var BASE_WIDTH = 375;
+  var ROOT_FONT_SIZE = 16;
+
+	function refreshRem(){
+    var width = docEl.getBoundingClientRect().width;
+    if  ( width > 640) {
+      width = width/2;
+    }
+    var rem = width / (BASE_WIDTH / ROOT_FONT_SIZE);
+    docEl.style.fontSize = rem + 'px';
+  }
+  refreshRem();
+  window.addEventListener('resize', function() {
+    clearTimeout(tid);
+    tid = setTimeout(refreshRem, 300);
+  }, false);
+})();
+</script>
+</head>
+<body>
