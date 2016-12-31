@@ -22,9 +22,11 @@ This is a new pro based on Node + Koa + Request
 + Install node.js [Ubuntu/Mac](https://github.com/creationix/nvm) , [Windows](https://nodejs.org/en/download/)
 
 + Clone this project
+
 ```
 git clone https://github.com/elevenBeans/TW2FS.git
-cd Global.H5.Flight
+
+cd TW2FS
 ```
 + Install local dependencies
 ```
