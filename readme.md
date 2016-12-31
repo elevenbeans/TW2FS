@@ -1,6 +1,6 @@
-# Ctripglobal node server
+# TW2FS
 
-This is a new pro for Ctrip Intl H5 (Flight) Site based on Node + Koa + Request
+This is a new pro based on Node + Koa + Request
 
 ## OverView
 #### Server:
