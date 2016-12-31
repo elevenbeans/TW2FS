@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "server": "webpack-dev-server --inline --port 8000 && ./node_modules/.bin/nodemon bin/run",
-    "watch": "webpack-dev-server --inline --port 8000",
+    "server": "./node_modules/.bin/nodemon bin/run",
+    "watch": "export FE_ENV=development && webpack-dev-server --inline --hot --port 8000 --hide-modules",
     "build": "export FE_ENV=development && webpack --display-modules --sort-modules-by size --colors",
     "publish": "export FE_ENV=production && webpack -p --progress --colors",
     "koa": "./node_modules/.bin/runkoa bin/www",

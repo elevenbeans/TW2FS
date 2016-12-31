@@ -18,7 +18,7 @@ var port = normalizePort(process.env.PORT || '3000');
 /**
  * Create HTTP server.
  */
-console.log('saf:',port);
+console.log('port:',port);
 
 var server = http.createServer(app.callback());
 

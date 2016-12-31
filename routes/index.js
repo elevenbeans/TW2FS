@@ -2,7 +2,7 @@ var router = require('koa-router')();
 
 router.get('*', async function (ctx, next) {
   ctx.state = {
-    title: 'Ctrips'
+    title: 'CtripGlobal'
   };
   await ctx.render('index', {
   });

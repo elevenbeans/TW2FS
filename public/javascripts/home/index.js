@@ -10,7 +10,9 @@ import { Router, Route, IndexRoute, Link, IndexLink, browserHistory } from 'reac
 
 if(module.hot) module.hot.accept();
 
-const ACTIVE = { color: 'red'};
+console.log($('body'));
+
+const ACTIVE = { color: 'blue'};
 
 const App = ({ children }) => (
   <div>
@@ -57,14 +59,13 @@ const User = ({ params: { name } }) => (
   </div>
 )
 
-render((
-  <Router history={browserHistory}>
-    <Route path="/" component={App}>
-      <IndexRoute component={Index}/>
-      <Route path="users" component={Users}>
-        <IndexRoute component={UsersIndex}/>
-        <Route path=":name" component={User}/>
-      </Route>
-    </Route>
-  </Router>
-), document.getElementById('app'))
+render((<Router key={Math.random()} history={browserHistory} >
+          <Route path="/" component={App}>
+            <IndexRoute component={Index}/>
+            <Route path="users" component={Users}>
+              <IndexRoute component={UsersIndex}/>
+              <Route path=":name" component={User}/>
+            </Route>
+          </Route>
+        </Router>
+  ), document.getElementById('app'))

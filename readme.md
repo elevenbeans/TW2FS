@@ -1,8 +1,6 @@
-# TW2FS
+# Ctripglobal node server
 
-This is a new pro based on Node + Koa + Request,
-
-The way to full stack.
+This is a new pro for Ctrip Intl H5 (Flight) Site based on Node + Koa + Request
 
 ## OverView
 #### Server:
@@ -24,11 +22,9 @@ The way to full stack.
 + Install node.js [Ubuntu/Mac](https://github.com/creationix/nvm) , [Windows](https://nodejs.org/en/download/)
 
 + Clone this project
-
 ```
-git clone https://github.com/elevenBeans/TW2FS.git
-
-cd TW2FS
+git clone http://git.dev.sh.ctripcorp.com/lbin/Global.H5.Flight.git
+cd Global.H5.Flight
 ```
 + Install local dependencies
 ```

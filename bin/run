@@ -1,5 +1,15 @@
 #!/usr/bin/env node
 
 var current_path = process.cwd();
-
+//console.log('current_path::::',current_path);
 require('runkoa')(current_path + '/bin/www' )
+
+// function run_cmd(cmd, args, callback) {
+//   var spawn = require('child_process').spawn;
+//   var child = spawn(cmd, args);
+//   var resp = "";
+//
+//   child.stdout.on('data', function(buffer) { resp += buffer.toString(); });
+//   child.stdout.on('end', function() { callback (resp) });
+// }
+// run_cmd('sh', ['bin/static.sh'], function(text){ console.log(text) });
