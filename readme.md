@@ -23,7 +23,7 @@ This is a new pro based on Node + Koa + Request
 
 + Clone this project
 ```
-git clone https://github.com/elevenBeans/TW2FS.gitGlobal.H5.Flight.git
+git clone https://github.com/elevenBeans/TW2FS.git
 cd Global.H5.Flight
 ```
 + Install local dependencies
