@@ -5,8 +5,8 @@
   "scripts": {
     "server": "./node_modules/.bin/nodemon bin/run",
     "watch": "export FE_ENV=development && webpack-dev-server --inline --hot --port 8000 --hide-modules",
-    "build": "export FE_ENV=development && webpack --display-modules --sort-modules-by size --colors",
-    "publish": "export FE_ENV=production && webpack -p --progress --colors",
+    "build": "export FE_ENV=development && webpack  --progress --hide-modules",
+    "publish": "export FE_ENV=production && webpack -p  --display-modules --sort-modules-by size --colors",
     "koa": "./node_modules/.bin/runkoa bin/www",
     "pm2": "pm2 start bin/run ",
     "test": "echo \"Error: no test specified\" && exit 1"

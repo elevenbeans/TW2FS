@@ -24,23 +24,29 @@ This is a new pro based on Node + Koa + Request
 + Install node.js [Ubuntu/Mac](https://github.com/creationix/nvm) , [Windows](https://nodejs.org/en/download/)
 
 + Clone this project
-```
-git clone https://github.com/elevenBeans/TW2FS.git
-cd TW2FS
-```
+	```
+	git clone https://github.com/elevenBeans/TW2FS.git
+	cd TW2FS
+	```
 + Install local dependencies
-```
-npm install
-```
-+ How to generate minified (dist) files ?
-```
-npm run build
-```
+	```
+	npm install
+	```
+
++ Run this project, see it in `localhost:3000`
+	```
+	./start.sh
+	```
+
++ How to generate compiled (dist) files ?
+
+	```
+	npm run build
+	
+	npm run publish
+	```
 + Above command will generate new files by reading from ```Pubilc``` folder
 
-+ run this project, see it in `localhost:3000`
-```
-npm run server
-```
+
 
 to be added ...

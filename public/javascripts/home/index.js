@@ -12,7 +12,7 @@ if(module.hot) module.hot.accept();
 
 console.log($('body'));
 
-const ACTIVE = { color: 'blue'};
+const ACTIVE = { color: 'red'};
 
 const App = ({ children }) => (
   <div>
