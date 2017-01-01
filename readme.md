@@ -41,11 +41,11 @@ This is a new pro based on Node + Koa + Request
 + How to generate compiled (dist) files ?
 
 	```
-	npm run build
+	npm run build (for dev)
 	
-	npm run publish
+	npm run publish (for prd)
 	```
-+ Above command will generate new files by reading from ```Pubilc``` folder
++ Both the commands above will generate new files by reading from ```Pubilc``` folder
 
 
 
