@@ -33,17 +33,16 @@ This is a new pro based on Node + Koa + Request
 	npm install
 	```
 
-+ Run this project, see it in `localhost:3000`
++ Run this project by `./start.sh`, see it in `localhost:3000`
 	```
-	./start.sh
-	/*
+	`./start.sh` is equel to:
 
+	/**
 	npm run build
 
 	npm run server &
 
 	npm run watch
-
 	*/
 	```
 
@@ -53,7 +52,6 @@ This is a new pro based on Node + Koa + Request
 	npm run build (for dev)
 
 	npm run publish (for prd)
-
 	```
 + How to watching compiled (dist) files ?
 
@@ -62,6 +60,6 @@ This is a new pro based on Node + Koa + Request
 	```
 + Both the commands above will generate new files by reading from ```Pubilc``` folder
 
-
+**Hot Module Replacement is enabled! Enjoy it!**
 
 to be added ...
