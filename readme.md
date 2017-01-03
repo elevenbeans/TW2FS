@@ -35,15 +35,14 @@ This is a new pro based on Node + Koa + Request
 
 + Run this project by `./start.sh`, see it in `localhost:3000`
 	```
-	`./start.sh` is equel to:
+	//"./start.sh" is equel to:
 
-	/**
 	npm run build
 
 	npm run server &
 
 	npm run watch
-	*/
+
 	```
 
 + How to generate compiled (dist) files ?
@@ -58,7 +57,6 @@ This is a new pro based on Node + Koa + Request
 	```
 	npm run watch
 	```
-+ Both the commands above will generate new files by reading from ```Pubilc``` folder
 
 **Hot Module Replacement is enabled! Enjoy it!**
 
