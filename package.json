@@ -5,7 +5,7 @@
   "scripts": {
     "server": "./node_modules/.bin/nodemon bin/run",
     "watch": "export FE_ENV=development && webpack-dev-server --inline --hot --port 8000 --hide-modules",
-    "build": "export FE_ENV=development && webpack  --progress --hide-modules",
+    "build": "export FE_ENV=development && webpack  --progress --config webpack.dll.js && webpack  --progress --hide-modules",
     "publish": "export FE_ENV=production && webpack -p  --display-modules --sort-modules-by size --colors",
     "koa": "./node_modules/.bin/runkoa bin/www",
     "pm2": "pm2 start bin/run ",
@@ -45,6 +45,7 @@
     "react-router": "^3.0.0",
     "style-loader": "^0.13.0",
     "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.16.2"
+    "webpack-dev-server": "^1.16.2",
+    "zepto": "^1.2.0"
   }
 }

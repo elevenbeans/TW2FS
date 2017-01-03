@@ -12,6 +12,6 @@ echo '\033[0;32;1m#####################################################\033[0m'
 
 echo '\033[0;33;1msee it in http://localhost:8000\033[0m'
 
-npm run watch &
+npm run server &
 
-npm run server
+npm run watch

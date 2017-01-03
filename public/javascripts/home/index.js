@@ -1,7 +1,7 @@
 'use strict'
 
-import '../../stylesheets/global.less';
-import '../../stylesheets/flight.less';
+//import '../../stylesheets/global.less';
+//import '../../stylesheets/flight.less';
 
 import $ from 'zepto';
 import React from 'react';
@@ -11,6 +11,8 @@ import { Router, Route, IndexRoute, Link, IndexLink, browserHistory } from 'reac
 if(module.hot) module.hot.accept();
 
 console.log($('body'));
+console.log();
+console.log(process.env.FE_ENV);
 
 const ACTIVE = { color: 'red'};
 

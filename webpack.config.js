@@ -7,8 +7,8 @@ if(process.env.FE_ENV === 'production') CDN_NAME = 'https://c-ctrip.com'
 
 module.exports = {
   entry: {
-    flight: './public/javascripts/home/index.js',
-    vendor: ['react','react-dom','react-router'] // CommonsChunkPlugin
+    flight: './public/javascripts/home/index.js'
+    //vendor: ['react','react-dom','react-router'] // CommonsChunkPlugin
   },
   output: {
     path: './dist',
@@ -39,14 +39,13 @@ module.exports = {
     ]
   },
   plugins:  [
-    new webpack.optimize.OccurenceOrderPlugin(),
-    // Webpack 2.0 fixed this mispelling
-    //new webpack.HotModuleReplacementPlugin(), //webpack-dev-server 的 HMR 无法 hold 后端 server
-    // new webpack.ProvidePlugin({
+    new webpack.optimize.OccurenceOrderPlugin(),//比对id的使用频率和分布来得出最短的id分配给使用频率高的模块
+    // new webpack.HotModuleReplacementPlugin(), //同命令行中的 --hot
+    // new webpack.ProvidePlugin({ Module (value) is loaded when the identifier (key) is used as free variable in a module
     //        $: 'jquery'
     // }),
     new ExtractTextPlugin("./css/IBU.H5.flight.css"),
-    new webpack.optimize.CommonsChunkPlugin('vendor','[name].bundle.js'),
+    //new webpack.optimize.CommonsChunkPlugin('vendor','[name].bundle.js'),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
@@ -56,9 +55,15 @@ module.exports = {
       }
     }),
     new webpack.DefinePlugin({
+      //The DefinePlugin allows you to create global constants which can be configured at compile time.
       "process.env": {
-         NODE_ENV: JSON.stringify(process.env.FE_ENV)
+         FE_ENV: JSON.stringify(process.env.FE_ENV)
        }
-    })
+    }),
+    new webpack.DllReferencePlugin({
+       context: __dirname,
+       scope: "flight",
+       manifest: require('./manifest.json')
+    }),
   ]
 }
