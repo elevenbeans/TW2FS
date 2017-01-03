@@ -2,7 +2,7 @@
 
 The way to full stack.
 
-This is a new pro based on Node + Koa + Request
+This is a new pro based on Node + Koa + Request + ES6 + React
 
 ## OverView
 #### Server:
@@ -58,6 +58,6 @@ This is a new pro based on Node + Koa + Request
 	npm run watch
 	```
 
-**Hot Module Replacement is enabled! Enjoy it!**
+**Hot Module Replacement is enabled! Enjoy it :)**
 
 to be added ...
