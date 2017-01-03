@@ -52,7 +52,7 @@ This is a new pro based on Node + Koa + Request + ES6 + React
 
 	npm run publish (for prd)
 	```
-+ How to watching compiled (dist) files ?
++ How to watching my module files ?
 
 	```
 	npm run watch
