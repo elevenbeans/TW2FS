@@ -8,11 +8,13 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, IndexRoute, Link, IndexLink, browserHistory } from 'react-router';
 
-if(module.hot) module.hot.accept();
+if(module.hot && process.env.NODE_ENV === 'dev-HMR') module.hot.accept();
 
+
+console.log('envirment:',process.env.NODE_ENV);
 console.log($('body'));
 
-const ACTIVE = { color: 'red'};
+const ACTIVE = { color: 'blue'};
 
 const App = ({ children }) => (
   <div>

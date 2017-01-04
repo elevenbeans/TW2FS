@@ -61,11 +61,12 @@ This is a new pro based on Node + Koa + Request + ES6 + React
 
 **Hot Module Replacement(HMR) is enabled by default! Enjoy it :)**
 
-Want to disable HMR? 
+Want to disable HMR? Run `export NODE_ENV=dev && ./start.sh`. 
 
-Run `export NODE_ENV=dev && ./start.sh`. In this mode, the size of resource files can be extremely small.
+Run `export NODE_ENV=dev-HMR && ./start.sh` to reopen HMR.
 
-Run `export NODE_ENV=dev-HMR && ./start.sh` to reopen it.
+Run `export NODE_ENV=pre && ./start.sh`. In this mode, the size of resource files can be extremely small.
+
 
 
 *to be added ...*

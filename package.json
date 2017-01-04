@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "server": "./node_modules/.bin/nodemon bin/run",
-    "watch": "webpack-dev-server --inline --hot --port 8000 --hide-modules",
+    "watch": "webpack-dev-server --port 8000 --hide-modules",
     "build": "webpack  --progress --hide-modules",
     "koa": "./node_modules/.bin/runkoa bin/www",
     "pm2": "pm2 start bin/run ",
