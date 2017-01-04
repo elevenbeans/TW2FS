@@ -57,7 +57,7 @@ This is a new pro based on Node + Koa + Request + ES6 + React
 	npm run watch
 	```
 
-**Hot Module Replacement is enabled! Enjoy it :)**
+**Hot Module Replacement(HMR) is enabled! Enjoy it :)**
 
 Want to disable HMR? 
 
@@ -67,4 +67,4 @@ In this mode, the size of resource files are extremely small.
 
 
 
-to be added ...
+*to be added ...*
