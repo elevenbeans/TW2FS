@@ -11,7 +11,6 @@ import { Router, Route, IndexRoute, Link, IndexLink, browserHistory } from 'reac
 if(module.hot) module.hot.accept();
 
 console.log($('body'));
-console.log(process.env.FE_ENV);
 
 const ACTIVE = { color: 'blue'};
 

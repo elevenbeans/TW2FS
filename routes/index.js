@@ -1,15 +1,16 @@
 var router = require('koa-router')();
-
 var CDN_URL;
 
-console.log('process.env.NODE_ENV:',process.env.NODE_ENV);
+//console.log('process.env.NODE_ENV:',process.env.NODE_ENV);
 
-if(!process.env.NODE_ENV) process.env.NODE_ENV = 'development';
+if(!process.env.NODE_ENV) process.env.NODE_ENV = 'dev-HMR';
 
-if(process.env.NODE_ENV == 'development'){
+if(process.env.NODE_ENV == 'dev-HMR'){
 	CDN_URL = 'http://localhost:8000'
-}else{
+}else if(process.env.NODE_ENV == 'dev'){
 	CDN_URL = 'http://localhost:3000'
+}else{
+  CDN_URL = 'http://webresource.english.c-ctrip.com'
 }
 
 router.get('*', async function (ctx, next) {
@@ -18,7 +19,7 @@ router.get('*', async function (ctx, next) {
   ctx.state = {
     title: 'CtripGlobal',
     env: process.env.NODE_ENV,
-    cdnUrl:CDN_URL
+    cdnUrl: CDN_URL
   };
   await ctx.render('index', {
   });

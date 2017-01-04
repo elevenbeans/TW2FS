@@ -3,7 +3,9 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const CDN_URL = 'http://localhost:8000';
 
-if(process.env.FE_ENV === 'production') CDN_URL = 'https://c-ctrip.com'
+if(process.env.FE_ENV === 'dev-HMR') CDN_URL = 'http://localhost:8000'
+if(process.env.FE_ENV === 'dev') CDN_URL = 'http://localhost:3000'
+if(process.env.FE_ENV === 'prd') CDN_URL = 'https://c-ctrip.com'
 
 module.exports = {
   entry: {

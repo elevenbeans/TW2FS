@@ -11,8 +11,6 @@ const logger = require('koa-logger');
 
 const index = require('./routes/index');
 
-console.log('first:',process.env.NODE_ENV);
-
 const gzip = require('koa-gzip');
 
 //middlewares
@@ -34,8 +32,6 @@ app.use(async (ctx, next) => {
   const ms = new Date() - start;
   console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
 });
-
-console.log('ENV_IN_SERVER:',process.env.NODE_ENV);
 
 router.use('/', index.routes(), index.allowedMethods());
 
