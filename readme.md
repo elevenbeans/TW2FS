@@ -57,6 +57,8 @@ This is a new pro based on Node + Koa + Request + ES6 + React
 	npm run watch
 	```
 
+## Notice
+
 **Hot Module Replacement(HMR) is enabled by default! Enjoy it :)**
 
 Want to disable HMR? 
