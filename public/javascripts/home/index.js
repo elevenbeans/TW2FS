@@ -14,7 +14,7 @@ if(module.hot && process.env.NODE_ENV === 'dev-HMR') module.hot.accept();
 console.log('envirment:',process.env.NODE_ENV);
 console.log($('body'));
 
-const ACTIVE = { color: 'blue'};
+const ACTIVE = { color: 'red'};
 
 const App = ({ children }) => (
   <div>

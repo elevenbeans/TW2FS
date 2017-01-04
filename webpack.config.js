@@ -56,7 +56,7 @@ var config = {
     //   $: 'jquery'
     //}),
     new ExtractTextPlugin("./css/IBU.H5.flight.css"),
-    new webpack.optimize.CommonsChunkPlugin('router','[name].bundle.js'),
+    new webpack.optimize.CommonsChunkPlugin('router','[name].bundle.js'), // CommonsChunk
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
