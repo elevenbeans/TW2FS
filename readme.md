@@ -65,7 +65,7 @@ Want to disable HMR?
 
 Run `export NODE_ENV=dev && ./start.sh`. In this mode, the size of resource files can be extremely small.
 
-Run `export NODE_ENV=dev-HMR && ./start.sh` to enable it.
+Run `export NODE_ENV=dev-HMR && ./start.sh` to reopen it.
 
 
 *to be added ...*
