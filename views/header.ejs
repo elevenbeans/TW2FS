@@ -12,7 +12,7 @@
   <meta name='format-detection' content='telephone=no' />
   <meta name='apple-touch-fullscreen' content='yes' />
   <meta name='apple-mobile-web-app-capable' content='yes' />
-  <link rel="stylesheet" type="text/css" href="http://localhost:8000/dist/css/IBU.H5.flight.css">
+  <link rel="stylesheet" type="text/css" href="<%=cdnUrl%>/dist/css/IBU.H5.flight.css">
 <script>
 ;(function () {
   var tid = null;
@@ -34,6 +34,9 @@
     tid = setTimeout(refreshRem, 300);
   }, false);
 })();
+</script>
+<script>
+var _ENVIRMENT = "<%= env %>";
 </script>
 </head>
 <body>

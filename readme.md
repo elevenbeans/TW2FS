@@ -34,6 +34,7 @@ This is a new pro based on Node + Koa + Request + ES6 + React
 	```
 
 + Run this project by `./start.sh`, see it in `localhost:3000`
+	
 	```
 	//"./start.sh" is equel to:
 
@@ -48,9 +49,7 @@ This is a new pro based on Node + Koa + Request + ES6 + React
 + How to generate compiled (dist) files ?
 
 	```
-	npm run build (for dev)
-
-	npm run publish (for prd)
+	npm run build
 	```
 + How to watching my module files ?
 
@@ -59,5 +58,13 @@ This is a new pro based on Node + Koa + Request + ES6 + React
 	```
 
 **Hot Module Replacement is enabled! Enjoy it :)**
+
+Want to disable HMR? 
+
+Run `export NODE_ENV=production && ./start.sh`,
+
+In this mode, the size of resource files are extremely small.
+
+
 
 to be added ...

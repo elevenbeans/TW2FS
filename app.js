@@ -11,13 +11,17 @@ const logger = require('koa-logger');
 
 const index = require('./routes/index');
 
-// middlewares
+console.log('first:',process.env.NODE_ENV);
+
+const gzip = require('koa-gzip');
+
+//middlewares
+app.use(gzip());
 app.use(convert(bodyparser));
 app.use(convert(json()));
 app.use(convert(logger()));
 
-//app.use(require('koa-static')(__dirname + '/dist')); //静态资源全走 8000 服务
-//app.use(require('koa-static')(__dirname + '/public'));
+app.use(require('koa-static')(__dirname + '/')); //静态资源开发走 8000 服务
 
 app.use(views(__dirname + '/views', {
   extension: 'ejs'
@@ -30,6 +34,8 @@ app.use(async (ctx, next) => {
   const ms = new Date() - start;
   console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
 });
+
+console.log('ENV_IN_SERVER:',process.env.NODE_ENV);
 
 router.use('/', index.routes(), index.allowedMethods());
 

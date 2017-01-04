@@ -1,22 +1,24 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-var CDN_NAME = 'http://localhost:8000';
+const CDN_URL = 'http://localhost:8000';
 
-if(process.env.FE_ENV === 'production') CDN_NAME = 'https://c-ctrip.com'
+if(process.env.FE_ENV === 'production') CDN_URL = 'https://c-ctrip.com'
 
 module.exports = {
   entry: {
-    flight: './public/javascripts/home/index.js'
-    //vendor: ['react','react-dom','react-router'] // CommonsChunkPlugin
+    flight: './public/javascripts/home/index.js',
+    router: ['react-router'] // CommonsChunkPlugin
   },
   output: {
     path: './dist',
-    publicPath: CDN_NAME + "/dist/", //静态资源文件内的请求路径指向静态资源服务器
+    publicPath: CDN_URL + "/dist/", //静态资源文件内的请求路径指向静态资源服务器
     filename: 'IBU.H5.[name].js'
   },
   externals: {
-    zepto: 'window.$'
+    'zepto': 'window.$',
+    'react':'window.React',
+    'react-dom':'window.ReactDOM'
   },
   module: {
     loaders: [
@@ -33,8 +35,8 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          presets: 'es2015',
-        },
+          presets: 'es2015'
+        }
       }
     ]
   },
@@ -42,10 +44,10 @@ module.exports = {
     new webpack.optimize.OccurenceOrderPlugin(),//比对id的使用频率和分布来得出最短的id分配给使用频率高的模块
     // new webpack.HotModuleReplacementPlugin(), //同命令行中的 --hot
     // new webpack.ProvidePlugin({ Module (value) is loaded when the identifier (key) is used as free variable in a module
-    //        $: 'jquery'
+    //    $: 'jquery'
     // }),
     new ExtractTextPlugin("./css/IBU.H5.flight.css"),
-    //new webpack.optimize.CommonsChunkPlugin('vendor','[name].bundle.js'),
+    new webpack.optimize.CommonsChunkPlugin('router','[name].bundle.js'),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
@@ -59,11 +61,11 @@ module.exports = {
       "process.env": {
          FE_ENV: JSON.stringify(process.env.FE_ENV)
        }
-    }),
-    new webpack.DllReferencePlugin({
-       context: __dirname,
-       scope: "flight",
-       manifest: require('./manifest.json')
-    }),
+    })
+    // new webpack.DllReferencePlugin({
+    //    context: __dirname,
+    //    scope: "flight",
+    //    manifest: require('./dist/router-manifest.json')
+    // }),
   ]
 }
