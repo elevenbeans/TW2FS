@@ -20,12 +20,12 @@ import {Component} from 'react';
 class Home extends Component {
 	render(){
 		return(<div style={{'overflow-x':'hidden'}}>
-			    	<Appbanner htmls="dasd"/>
+			    	HOME{/*<Appbanner htmls="dasd"/>
 						<Header pageType={0} isToHome={1} />
 						<Pagetab onTabChange={this.pageTabChange} tabIndex={this.state.channelIndex}
                     tabData={this.state.tabData}
                     onHide={this.state.onHide} />
-            <Footer />
+            <Footer />*/}
 					</div>
 					);
 	}
