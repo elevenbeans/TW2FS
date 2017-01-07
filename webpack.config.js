@@ -1,21 +1,24 @@
 var webpack = require('webpack');
+var path = require('path');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-const CDN_URL = 'http://localhost:8000';
+var moduleCfg = require('./module.config');
+var CDN_URL = '';
 
 console.log('process.env.NODE_ENV in webpack config::::',process.env.NODE_ENV);
+
+if(!process.env.NODE_ENV) process.env.NODE_ENV = 'dev-HMR';
 
 if(process.env.NODE_ENV === 'dev-HMR') CDN_URL = 'http://localhost:8000';
 if(process.env.NODE_ENV === 'dev') CDN_URL = 'http://localhost:8000';
 if(process.env.NODE_ENV === 'pre') CDN_URL = 'http://localhost:3000';
 if(process.env.NODE_ENV === 'prd') CDN_URL = 'http://webresource.english.c-ctrip.com';
 
-
 var config = {
   entry: {
     flight: [
       'webpack/hot/dev-server',
-      './public/javascripts/home/index.js'
+      './public/javascripts/home/index.jsx'
     ],
     router: ['react-router'] // CommonsChunkPlugin
   },
@@ -40,11 +43,11 @@ var config = {
         loader: ExtractTextPlugin.extract("style-loader","css-loader!less-loader")
       },
       {
-        test: /\.js$/,
+        test: /\.js$|\.jsx$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          presets: 'es2015'
+          presets: ['react','es2015']
         }
       }
     ]
@@ -77,6 +80,12 @@ var config = {
     //    manifest: require('./dist/router-manifest.json')
     // }),
   ],
+  resolve: {
+    root: path.resolve(__dirname, "./public"),
+    fallback: [path.resolve(__dirname, './node_modules')],
+    extensions: ['', '.js', '.jsx'],
+    alias: moduleCfg
+  },
   devServer:{
     hot:process.env.NODE_ENV === 'dev-HMR',
     inline:true
