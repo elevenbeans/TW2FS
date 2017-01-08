@@ -1,4 +1,5 @@
 import {Component} from 'react';
+import { Link, IndexLink} from 'react-router';
 
 class Flight extends Component {
 	constructor(props){
@@ -6,7 +7,9 @@ class Flight extends Component {
 	}
 	render(){
 		return(
-			<div>flight</div>
+			<div>Flight
+      			<div><Link      to="/">go back home</Link></div>
+			</div>
 		)
 	}
 }

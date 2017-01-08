@@ -4,6 +4,7 @@
 // 		Homeflights,Hometrains,Utility,Store,Analytics,I18n,Appbanner) {
 
 import {Component} from 'react';
+import { Link, IndexLink} from 'react-router';
 
 // import Header from 'header2';
 // import Footer from 'footer2';
@@ -17,10 +18,17 @@ import {Component} from 'react';
 // import I18n from 'i18n2';
 // import Appbanner from 'appbanner2';
 
+const ACTIVE = { color: 'red'};
+
 class Home extends Component {
 	render(){
 		return(<div style={{'overflow-x':'hidden'}}>
-			    	HOME{/*<Appbanner htmls="dasd"/>
+			    	Home
+      			<div>
+      				<Link      to="/flight"      activeStyle={ACTIVE}>go to flight</Link>
+      			</div>
+
+			    	{/*<Appbanner htmls="dasd"/>
 						<Header pageType={0} isToHome={1} />
 						<Pagetab onTabChange={this.pageTabChange} tabIndex={this.state.channelIndex}
                     tabData={this.state.tabData}

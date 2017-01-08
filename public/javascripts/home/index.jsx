@@ -30,7 +30,6 @@ const App = ({ children }) => (
     <h1>APP!</h1>
     <ul>
       <li><Link      to="/"           activeStyle={ACTIVE}>/</Link></li>
-      <li><Link      to="/flight"      activeStyle={ACTIVE}>/flight</Link></li>
     </ul>
 
     {children}
