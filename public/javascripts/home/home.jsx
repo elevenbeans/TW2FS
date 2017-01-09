@@ -18,14 +18,13 @@ import { Link, IndexLink} from 'react-router';
 // import I18n from 'i18n2';
 // import Appbanner from 'appbanner2';
 
-const ACTIVE = { color: 'red'};
 
 class Home extends Component {
 	render(){
 		return(<div style={{'overflow-x':'hidden'}}>
 			    	Home
       			<div>
-      				<Link      to="/flight"      activeStyle={ACTIVE}>go to flight</Link>
+      				<Link to="/flight" >go to flight</Link>
       			</div>
 
 			    	{/*<Appbanner htmls="dasd"/>

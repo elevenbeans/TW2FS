@@ -42,6 +42,13 @@ var config = {
         test: /\.less$/,
         loader: ExtractTextPlugin.extract("style-loader","css-loader!less-loader")
       },
+      { test: /\.(png|jpg|gif)$/, 
+        loader: "file-loader" 
+      },
+      {
+        test: /\.(ttf|svg|woff)(\?[a-z0-9]+)?$/,
+        loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]'
+      },
       {
         test: /\.js$|\.jsx$/,
         exclude: /node_modules/,
