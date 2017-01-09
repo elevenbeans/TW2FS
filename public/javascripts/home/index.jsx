@@ -28,9 +28,7 @@ const ACTIVE = { color: 'red'};
 const App = ({ children }) => (
   <div>
     <h1>APP!</h1>
-
     {children}
-
   </div>
 )
 

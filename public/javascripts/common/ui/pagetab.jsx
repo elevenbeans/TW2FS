@@ -1,3 +1,5 @@
+import ClickBox from 'ClickBox';
+
 define(['react',"ClickBox"],function (React,ClickBox) {
 	var DOM = React.DOM;
 	return React.createClass({

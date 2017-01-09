@@ -5,18 +5,30 @@
 
 import {Component} from 'react';
 import { Link, IndexLink} from 'react-router';
-
+import $ from 'zepto';
 // import Header from 'header2';
 // import Footer from 'footer2';
 // import Pagetab from 'pagetab2';
 // import Homehotels from 'homehotels2';
 // import Homeflights from 'homeflights2';
 // import Hometrains from 'hometrains2';
-// import Utility from 'utility';
-// import Store from 'store';
-// import Analytics from 'analytics';
-// import I18n from 'i18n2';
-// import Appbanner from 'appbanner2';
+
+
+import Utility from 'utility';
+//import Store from 'store';
+import Analytics from 'analytics';
+import I18n from 'i18n';
+
+import Appbanner from 'appbanner';
+
+// import Header from 'header';
+
+// import Pagetab from 'pagetab';
+// import Homeflights from 'flights';
+// import Hometrains from 'trains';
+// import Homehotels from 'hotels';
+
+// import Footer from 'footer';
 
 
 class Home extends Component {
@@ -27,8 +39,8 @@ class Home extends Component {
       				<Link to="/flight" >go to flight</Link>
       			</div>
 
-			    	{/*<Appbanner htmls="dasd"/>
-						<Header pageType={0} isToHome={1} />
+			    	<Appbanner htmls="dasd"/>
+						{/*<Header pageType={0} isToHome={1} />
 						<Pagetab onTabChange={this.pageTabChange} tabIndex={this.state.channelIndex}
                     tabData={this.state.tabData}
                     onHide={this.state.onHide} />
