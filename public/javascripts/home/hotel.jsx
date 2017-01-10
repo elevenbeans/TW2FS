@@ -1,4 +1,6 @@
 import {Component} from 'react';
+import { Link, IndexLink} from 'react-router';
+
 
 class Hotel extends Component {
 	constructor(props){
@@ -6,7 +8,9 @@ class Hotel extends Component {
 	}
 	render(){
 		return(
-			<div>Hotel</div>
+			<div>This is Hotel page ~ 
+				<div><Link to="/">go back home</Link></div>
+			</div>
 		)
 	}
 }

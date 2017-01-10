@@ -9,6 +9,7 @@ import { render } from 'react-dom';
 import { Router, Route, IndexRoute, Link, IndexLink, browserHistory } from 'react-router';
 
 import Home from 'home';
+import Header from 'header';
 import Flight from 'flight';
 import Train from 'train';
 import Hotel from 'hotel';
@@ -25,17 +26,24 @@ console.log('hotel:',Hotel)
 
 const ACTIVE = { color: 'red'};
 
-const App = ({ children }) => (
+const App = ({ children }) => ( //children = React.children
   <div>
-    <h1>APP!</h1>
+    <Header />
+
     {children}
+
   </div>
 )
 
 render((<Router key={Math.random()} history={browserHistory} >
           <Route path="/" component={App}>
             <IndexRoute component={Home}/>
-            <Route path="flight" component={Flight}></Route>
+            <Route path="flight" component={Flight}>
+            </Route>
+            <Route path="train" component={Train}>
+            </Route>
+            <Route path="hotel" component={Hotel}>
+            </Route>
           </Route>
         </Router>
   ), document.getElementById('app')

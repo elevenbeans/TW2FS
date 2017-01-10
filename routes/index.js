@@ -35,7 +35,8 @@ var ThrowToErroPage = async function (ctx, next) {
 
 router.get('/', ThrowToHomePage);
 router.get('flight', ThrowToHomePage);
-
+router.get('hotel', ThrowToHomePage);
+router.get('train', ThrowToHomePage);
 
 router.get('*', ThrowToErroPage);
 
