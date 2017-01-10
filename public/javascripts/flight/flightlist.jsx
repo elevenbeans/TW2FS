@@ -1,17 +1,17 @@
 
 import {Component} from 'react';
 
-class FlightSearch extends Component {
+class FlightList extends Component {
 	constructor(props){
 		super(props);
 	}
 	render(){
 		return(
 			<div className="flightsearch-main">
-	    	Flight Search page ~ <br />
+	    	<h2>This is FlightList page~</h2><br />
 			</div>
 		);
 	}
 }
 
-export default FlightSearch;
+export default FlightList;

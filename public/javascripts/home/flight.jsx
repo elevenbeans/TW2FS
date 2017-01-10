@@ -9,7 +9,7 @@ class Flight extends Component {
 		return(
 			<div className="flight-main"><h2>This is Flight page~</h2><br />
       	<div>
-      		<Link to="flight/shanghai-to-beijing">go search</Link><br />
+      		<Link to="flight/shanghai-to-beijing">Search</Link><br /><br />
       		<a href="http://localhost:3000/">go back home</a>
       	</div>
 			</div>

@@ -7,7 +7,7 @@ module.exports = {
 	header:'javascripts/common/ui/header',
 
   flight: 'javascripts/home/flight',
-  flightsearch: 'javascripts/flight/flightsearch',
+  flightlist: 'javascripts/flight/flightlist',
   train: 'javascripts/home/train',
   hotel:'javascripts/home/hotel'
     

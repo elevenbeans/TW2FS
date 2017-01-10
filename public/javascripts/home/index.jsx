@@ -16,7 +16,7 @@ import {presets} from 'react-router-transition';
 import Home from 'home';
 import Header from 'header';
 import Flight from 'flight';
-import FlightSearch from 'flightsearch';
+import FlightList from 'flightlist';
 import Train from 'train';
 import Hotel from 'hotel';
 
@@ -68,7 +68,7 @@ render((<Router key={Math.random()} history={browserHistory} >
             <Route path="flight" component={Flight}>
             </Route>
 
-            <Route path="flight/:citys" component={FlightSearch}>
+            <Route path="flight/:citys" component={FlightList}>
             </Route>
 
             <Route path="train" component={Train}>
