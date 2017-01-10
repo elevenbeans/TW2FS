@@ -1,7 +1,6 @@
 import {Component} from 'react';
 import { Link, IndexLink} from 'react-router';
 
-
 class Train extends Component {
 	constructor(props){
 		super(props);
