@@ -7,8 +7,10 @@ class Flight extends Component {
 	}
 	render(){
 		return(
-			<div>This is Flight page~
-      	<div><Link to="/">go back home</Link></div>
+			<div className="flight-main">This is Flight page~
+      	<div>
+      		<Link to="/">go back home</Link>
+      	</div>
 			</div>
 		)
 	}

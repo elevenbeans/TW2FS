@@ -43,6 +43,7 @@
     "nodemon": "^1.8.1",
     "react": "^15.4.1",
     "react-router": "^3.0.0",
+    "react-router-transition": "0.0.6",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.1",

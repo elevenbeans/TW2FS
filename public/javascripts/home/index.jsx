@@ -8,6 +8,8 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, IndexRoute, Link, IndexLink, browserHistory } from 'react-router';
 
+import {RouteTransition} from 'react-router-transition';
+import {presets} from 'react-router-transition';
 import Home from 'home';
 import Header from 'header';
 import Flight from 'flight';
@@ -21,16 +23,17 @@ console.log('process.env.NODE_ENV in Front-end:',process.env.NODE_ENV);
 console.log($('body'));
 
 console.log('flight:',Flight);
-console.log('train:',Train)
-console.log('hotel:',Hotel)
 
-const ACTIVE = { color: 'red'};
-
-const App = ({ children }) => ( //children = React.children
+const App = ({ children, location }) => ( //children = React.children
   <div>
     <Header />
 
-    {children}
+    <RouteTransition
+      className="transition-wrapper"
+      pathname={location.pathname}
+      {...presets.slideLeft}>
+      {children}
+    </RouteTransition>
 
   </div>
 )

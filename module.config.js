@@ -1,4 +1,7 @@
 module.exports = {
+	
+	'react-router-transition': __dirname + '/node_modules/react-router-transition/src/index',
+	
 	home:'javascripts/home/home',
 
 	header:'javascripts/common/ui/header',

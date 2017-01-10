@@ -51,7 +51,7 @@ var config = {
       },
       {
         test: /\.js$|\.jsx$/,
-        exclude: /node_modules/,
+        //exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
           presets: ['react','es2015']
@@ -94,7 +94,7 @@ var config = {
     alias: moduleCfg
   },
   devServer:{
-    hot:process.env.NODE_ENV === 'dev-HMR',
+    hot: process.env.NODE_ENV === 'dev-HMR',
     inline:true
   }
 }

@@ -8,8 +8,10 @@ class Train extends Component {
 	}
 	render(){
 		return(
-			<div>This is train page ~
-				<div><Link to="/">go back home</Link></div>
+			<div className='train-main'>This is train page ~
+				<div>
+					<Link to="/">go back home</Link>
+				</div>
 			</div>
 		)
 	}
