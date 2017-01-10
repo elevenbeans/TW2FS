@@ -7,9 +7,9 @@ class Hotel extends Component {
 	}
 	render(){
 		return(
-			<div className='hotel-main'>This is Hotel page ~ 
+			<div className='hotel-main'><h2>This is Hotel page ~</h2> <br />
 				<div>
-					<Link to="/">go back home</Link>
+      		<a href="http://localhost:3000/">go back home</a>
 				</div>
 			</div>
 		)

@@ -8,11 +8,15 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, IndexRoute, Link, IndexLink, browserHistory } from 'react-router';
 
+import createHistory from 'history/createBrowserHistory';
+
 import {RouteTransition} from 'react-router-transition';
 import {presets} from 'react-router-transition';
+
 import Home from 'home';
 import Header from 'header';
 import Flight from 'flight';
+import FlightSearch from 'flightsearch';
 import Train from 'train';
 import Hotel from 'hotel';
 
@@ -20,31 +24,56 @@ if(module.hot && process.env.NODE_ENV === 'dev-HMR') module.hot.accept();
 
 console.log('process.env.NODE_ENV in Front-end:',process.env.NODE_ENV);
 
-console.log($('body'));
+const history = createHistory();
 
-console.log('flight:',Flight);
+const location = history.location;
 
-const App = ({ children, location }) => ( //children = React.children
+var styles = presets.slideLeft;
+
+// // Listen for changes to the current location.
+// const unlisten = history.listen((location, action) => {
+//   console.log(action, location.pathname, location);
+// })
+
+// Use push, replace, and go to navigate around.
+//history.push('/home', { some: 'state' })
+
+// To stop listening, call the function returned from listen().
+//unlisten()
+
+var App = function ({ children, location }) { //children = React.children
+  
+  styles = location.action === 'POP'? presets.slideRight: presets.slideLeft;
+
+  return (
   <div>
     <Header />
 
     <RouteTransition
       className="transition-wrapper"
       pathname={location.pathname}
-      {...presets.slideLeft}>
+      runOnMount={false}
+      {...styles}>
       {children}
     </RouteTransition>
 
   </div>
-)
+  )
+}
 
 render((<Router key={Math.random()} history={browserHistory} >
           <Route path="/" component={App}>
             <IndexRoute component={Home}/>
+
             <Route path="flight" component={Flight}>
             </Route>
+
+            <Route path="flight/:citys" component={FlightSearch}>
+            </Route>
+
             <Route path="train" component={Train}>
             </Route>
+
             <Route path="hotel" component={Hotel}>
             </Route>
           </Route>

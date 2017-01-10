@@ -8,9 +8,9 @@ class Train extends Component {
 	}
 	render(){
 		return(
-			<div className='train-main'>This is train page ~
+			<div className='train-main'><h2>This is train page ~</h2><br />
 				<div>
-					<Link to="/">go back home</Link>
+      		<a href="http://localhost:3000/">go back home</a>
 				</div>
 			</div>
 		)
