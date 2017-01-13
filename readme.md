@@ -2,7 +2,7 @@
 
 The way to full stack.
 
-This is a new pro based on Node + Koa + Request + ES6 + React
+This is a new pro based on Node + Koa + React
 
 ## OverView
 #### Server:

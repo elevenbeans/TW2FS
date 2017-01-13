@@ -25,7 +25,6 @@ if(module.hot && process.env.NODE_ENV === 'dev-HMR') module.hot.accept();
 console.log('process.env.NODE_ENV in Front-end:',process.env.NODE_ENV);
 
 const history = createHistory();
-
 const location = history.location;
 
 var styles = presets.slideLeft;
