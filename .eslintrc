@@ -1,12 +1,16 @@
 {
     "env": {
         "browser": true,
+        "node": true,
         "commonjs": true,
         "amd": true,
         "es6": true,
     },
     "globals": {
-        "restfulApi": true,
+        "$": true,
+        "define": true,                      
+        "require": true,
+        "restfulApi": true
     },
     "extends": [
         "eslint:recommended",

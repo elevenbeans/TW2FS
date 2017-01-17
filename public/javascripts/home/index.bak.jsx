@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 import '../../stylesheets/global.less';
 import '../../stylesheets/flight.less';
@@ -13,17 +13,17 @@ import Flight from 'flight';
 import Train from 'train';
 import Hotel from 'hotel';
 
-if(module.hot && process.env.NODE_ENV === 'dev-HMR') module.hot.accept();
+if (module.hot && process.env.NODE_ENV === 'dev-HMR') module.hot.accept();
 
-console.log('process.env.NODE_ENV in Front-end:',process.env.NODE_ENV);
+console.log('process.env.NODE_ENV in Front-end:', process.env.NODE_ENV);
 
 console.log($('body'));
 
-console.log('flight:',Flight);
-console.log('train:',Train)
-console.log('hotel:',Hotel)
+console.log('flight:', Flight);
+console.log('train:', Train);
+console.log('hotel:', Hotel);
 
-const ACTIVE = { color: 'red'};
+const ACTIVE = { color: 'red' };
 
 const App = ({ children }) => (
   <div>
@@ -49,26 +49,26 @@ const App = ({ children }) => (
     {children}
 
   </div>
-)
+);
 
 const Users = ({ children }) => (
   <div>
     <h2>Users</h2>
     {children}
   </div>
-)
+);
 
 const UsersIndex = () => (
   <div>
     <h3>UsersIndex</h3>
   </div>
-)
+);
 
 const User = ({ params: { name } }) => (
   <div>
     <h3>User : {name}</h3>
   </div>
-)
+);
 
 render((<Router key={Math.random()} history={browserHistory} >
           <Route path="/" component={App}>
@@ -93,4 +93,4 @@ render((<Router key={Math.random()} history={browserHistory} >
           </Route>
         </Router>
   ), document.getElementById('app')
-)
+);
