@@ -8,8 +8,6 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
-// import createHistory from 'history/createBrowserHistory';
-
 import { RouteTransition } from 'react-router-transition';
 import { presets } from 'react-router-transition';
 
@@ -24,24 +22,11 @@ if (module.hot && process.env.NODE_ENV === 'dev-HMR') module.hot.accept();
 
 console.log('process.env.NODE_ENV in Front-end:', process.env.NODE_ENV);
 
-// const history = createHistory();
-// const location = history.location;
-
 var styles = presets.slideLeft;
-
-// // Listen for changes to the current location.
-// const unlisten = history.listen((location, action) => {
-//   console.log(action, location.pathname, location);
-// })
-
-// Use push, replace, and go to navigate around.
-// history.push('/home', { some: 'state' })
-
-// To stop listening, call the function returned from listen().
-// unlisten()
 
 var App = function({ children, location }) {
   styles = location.action === 'POP' ? presets.slideRight : presets.slideLeft;
+  console.log(location.action);
   return (
   <div>
     <Header />
