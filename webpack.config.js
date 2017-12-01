@@ -17,7 +17,6 @@ if(process.env.NODE_ENV === 'prd') CDN_URL = 'http://webresource.english.c-ctrip
 var config = {
   entry: {
     flight: [
-      'webpack/hot/dev-server',
       './public/javascripts/home/index.jsx'
     ],
     router: ['react-router'] // CommonsChunkPlugin
@@ -27,7 +26,7 @@ var config = {
     publicPath: CDN_URL + "/dist/", //静态资源文件内的请求路径指向静态资源服务器
     filename: 'IBU.H5.[name].js'
   },
-  externals: {
+  externals: { // dev 这里应该不加 react 和 react-dom 的 external, build 要加
     'zepto': 'window.$',
     'react':'window.React',
     'react-dom':'window.ReactDOM'
